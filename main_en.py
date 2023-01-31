@@ -65,16 +65,16 @@ for i in range(17):
         print("Input correct number >>> " ,end="")
         ans = input()
         if ans.isdecimal() == False:
-            print("***Input number range 1~17***")
+            print("***Enter a number in the range 1~17***")
         elif int(ans) < 0 or 18 < int(ans):
-            print("***Input number range 1~17***")
+            print("***Enter a number in the range 1~17***")
         else:
             break
     if int(ans) - 1 == order:
         print("Correct!!")
         correct += 1
     else:
-        print("Incorrect (Answer: " + str(order + 1) + ")")
+        print("Wrong (Answer: " + str(order + 1) + ")")
     if i < 16:
         for i in reversed(range(4)):
             time.sleep(1)
