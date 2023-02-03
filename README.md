@@ -2,7 +2,7 @@
 
 <details>
 <summary>
-日本語リファレンス
+🇯🇵日本語リファレンス
 </summary>
 <br>
 学校のテスト対策で作りました。
@@ -16,4 +16,11 @@
 5. 17問解いたら終了。
 
 ※答えの番号はSDGSロゴの左上に書いてある正式な番号です。詳しくはファイルに同梱されているgoals_jp.txt内、もしくはPythonプログラム内1番上のコメントアウトに記載されています。
+</details>
+
+<details>
+<summary>
+🇺🇸English Reference
+</summary>
+<br>
 </details>
