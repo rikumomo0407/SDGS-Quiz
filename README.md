@@ -17,7 +17,7 @@
 
 ※答えの番号はSDGSロゴの左上に書いてある正式な番号です。詳しくはファイルに同梱されているgoals_jp.txt内、もしくはPythonプログラム内1番上のコメントアウトに記載されています。
 
-※31行目から41行目の"path"という配列に表示したい画像のパスを答えの番号順にいれることで違う問題を作成することもできます。
+※31行目から41行目の"path"と定義された配列に表示したい画像のパスを答えの番号順にいれることで違う問題を作成することもできます。
 </details>
 
 <details>
@@ -36,4 +36,6 @@ I made it in preparation for a school test.
 5. After solving 17 questions, the program ends.
 
 ※The answer number is the official number written in the upper left corner of the SDGS logo. You can find the details in the file goals_en.txt included in the file, or in the comment out at the top of the Python program.
+
+※You can also create different questions by entering the paths of the images you want to display in the array defined as "path" in lines 31 to 41, in the order of the answer numbers.
 </details>
