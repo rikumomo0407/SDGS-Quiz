@@ -27,11 +27,11 @@ I made it in preparation for a school test.
 
 ## 👨‍🏫 How to use
 
-1. Run main_jp.py in the Python environme
+1. Run main_en.py in the Python environme
 2. The image of the question is displayed, and if you understand it, press any key.
 3. Enter the answer number in the console screen.
 4. After 3 seconds, the next question will be displayed.
 5. After solving 17 questions, the program ends.
 
-※The answer number is the official number written in the upper left corner of the SDGS logo. You can find the details in the file goals_jp.txt included in the file, or in the comment out at the top of the Python program.
+※The answer number is the official number written in the upper left corner of the SDGS logo. You can find the details in the file goals_en.txt included in the file, or in the comment out at the top of the Python program.
 </details>
