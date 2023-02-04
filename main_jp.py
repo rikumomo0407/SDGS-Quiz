@@ -28,25 +28,25 @@ import cv2
 import random
 import time
 
-path = [
-    "img_quiz\sdg_icon_01_ja_2.png",
-    "img_quiz\sdg_icon_02_ja_2.png",
-    "img_quiz\sdg_icon_03_ja_2.png",
-    "img_quiz\sdg_icon_04_ja_2.png",
-    "img_quiz\sdg_icon_05_ja_2.png",
-    "img_quiz\sdg_icon_06_ja_2.png",
-    "img_quiz\sdg_icon_07_ja_2.png",
-    "img_quiz\sdg_icon_08_ja_2.png",
-    "img_quiz\sdg_icon_09_ja_2.png",
-    "img_quiz\sdg_icon_10_ja_3.png",
-    "img_quiz\sdg_icon_11_ja_2.png",
-    "img_quiz\sdg_icon_12_ja_2.png",
-    "img_quiz\sdg_icon_13_ja_2.png",
-    "img_quiz\sdg_icon_14_ja_2.png",
-    "img_quiz\sdg_icon_15_ja_2.png",
-    "img_quiz\sdg_icon_16_ja_2.png",
-    "img_quiz\sdg_icon_17_ja_2.png"
-]
+# path = [
+#     "img_quiz\icon_1.png",
+#     "img_quiz\icon_2.png",
+#     "img_quiz\icon_3.png",
+#     "img_quiz\icon_4.png",
+#     "img_quiz\icon_5.png",
+#     "img_quiz\icon_6.png",
+#     "img_quiz\icon_7.png",
+#     "img_quiz\icon_8.png",
+#     "img_quiz\icon_9.png",
+#     "img_quiz\icon_10.png",
+#     "img_quiz\icon_11.png",
+#     "img_quiz\icon_12.png",
+#     "img_quiz\icon_13.png",
+#     "img_quiz\icon_14.png",
+#     "img_quiz\icon_15.png",
+#     "img_quiz\icon_16.png",
+#     "img_quiz\icon_17.png"
+# ]
 
 finished = []
 correct = 0
@@ -57,7 +57,8 @@ for i in range(17):
         if (order in finished) == 0:
             finished.append(order)
             break
-    img = cv2.imread(path[order])
+    img = cv2.imread("img_quiz\icon_" + str(order + 1) + ".png")
+    #img = cv2.imread(path[order])
     cv2.imshow("Question" + str(len(finished)), img)
     cv2.waitKey()
     cv2.destroyAllWindows()
