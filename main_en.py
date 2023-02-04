@@ -28,37 +28,36 @@ import cv2
 import random
 import time
 
-# path = [
-#     "img_quiz\icon_1.png",
-#     "img_quiz\icon_2.png",
-#     "img_quiz\icon_3.png",
-#     "img_quiz\icon_4.png",
-#     "img_quiz\icon_5.png",
-#     "img_quiz\icon_6.png",
-#     "img_quiz\icon_7.png",
-#     "img_quiz\icon_8.png",
-#     "img_quiz\icon_9.png",
-#     "img_quiz\icon_10.png",
-#     "img_quiz\icon_11.png",
-#     "img_quiz\icon_12.png",
-#     "img_quiz\icon_13.png",
-#     "img_quiz\icon_14.png",
-#     "img_quiz\icon_15.png",
-#     "img_quiz\icon_16.png",
-#     "img_quiz\icon_17.png"
-# ]
+path = [
+    "img_quiz\icon_1.png",
+    "img_quiz\icon_2.png",
+    "img_quiz\icon_3.png",
+    "img_quiz\icon_4.png",
+    "img_quiz\icon_5.png",
+    "img_quiz\icon_6.png",
+    "img_quiz\icon_7.png",
+    "img_quiz\icon_8.png",
+    "img_quiz\icon_9.png",
+    "img_quiz\icon_10.png",
+    "img_quiz\icon_11.png",
+    "img_quiz\icon_12.png",
+    "img_quiz\icon_13.png",
+    "img_quiz\icon_14.png",
+    "img_quiz\icon_15.png",
+    "img_quiz\icon_16.png",
+    "img_quiz\icon_17.png"
+]
 
 finished = []
 correct = 0
-for i in range(17):
+for i in range(len(path)):
     print("\r//////////Question" + str(len(finished) + 1) + "//////////")
     while(True):
-        order = random.randrange(17)
+        order = random.randrange(len(path))
         if (order in finished) == 0:
             finished.append(order)
             break
-    img = cv2.imread("img_quiz\icon_" + str(order + 1) + ".png")
-    #img = cv2.imread(path[order])
+    img = cv2.imread(path[order])
     cv2.imshow("Question" + str(len(finished)), img)
     cv2.waitKey()
     cv2.destroyAllWindows()
@@ -66,9 +65,9 @@ for i in range(17):
         print("Input correct number >>> " ,end="")
         ans = input()
         if ans.isdecimal() == False:
-            print("***Enter a number in the range 1~17***")
+            print("***Enter a number in the range 1~" + str(len(path)) + "***")
         elif int(ans) < 0 or 18 < int(ans):
-            print("***Enter a number in the range 1~17***")
+            print("***Enter a number in the range 1~" + str(len(path)) + "***")
         else:
             break
     if int(ans) - 1 == order:
@@ -81,4 +80,4 @@ for i in range(17):
             time.sleep(1)
             print("\rNext question: " + str(i),end="")
 print("//////////Result//////////")
-print("Accuracy rate:" + str(correct) +"/17")
+print("Accuracy rate:" + str(correct) + "/" + str(len(path)))
