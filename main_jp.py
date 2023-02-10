@@ -51,7 +51,7 @@ path = [
 finished = []
 correct = 0
 for i in range(len(path)):
-    print("\r//////////問題" + str(len(finished) + 1) + "//////////")
+    print("\r//////////問題" + str(i + 1) + "//////////")
     while(True):
         order = random.randrange(len(path))
         if (order in finished) == 0:
